@@ -2,7 +2,7 @@ import numpy as np
 import streamlit as st
 import pandas as pd
 import pickle
-import gzib
+import gzip
 
 
 pd.set_option('future.no_silent_downcasting',True)
