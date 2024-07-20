@@ -2,11 +2,12 @@ import numpy as np
 import streamlit as st
 import pandas as pd
 import pickle
+import gzib
 
 
 pd.set_option('future.no_silent_downcasting',True)
 
-with open('Flight_model.pkl', 'rb') as model_file:
+with gzib.open('compressed_model.pkl.gz', 'rb') as model_file:
     FFP = pickle.load(model_file)
 
 with open('Features_names_original.pkl', 'rb') as feature_file:
