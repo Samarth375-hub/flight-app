@@ -7,7 +7,7 @@ import gzip
 
 pd.set_option('future.no_silent_downcasting',True)
 
-with gzib.open('compressed_model.pkl.gz', 'rb') as model_file:
+with gzip.open('compressed_model.pkl.gz', 'rb') as model_file:
     FFP = pickle.load(model_file)
 
 with open('Features_names_original.pkl', 'rb') as feature_file:
